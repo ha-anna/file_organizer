@@ -45,7 +45,3 @@ My final project for [CS50P](https://cs50.harvard.edu/python/2022/).
 ## Contact
 
 Ha Anna - [@ha-anna](https://www.linkedin.com/in/ha-anna/) - anna@haanna.com
-
-<!-- File Organizer Project
-Organize any messy directory in a matter of seconds.
-I really enjoyed both lectures and assignments. Some of them took me a while to finish but it was nonetheless very satisfying to complete all of them. Now I feel like I became friends with Python and I can use it to build whatever I want. -->
