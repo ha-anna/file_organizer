@@ -1,0 +1,23 @@
+[project]
+name = "file-organizer_ha-anna"
+version = "0.0.1"
+authors = [
+  { name="Anna Ha", email="anna@haanna.com" },
+]
+description = "File organizer project."
+readme = "README.md"
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/ha-anna/file_organizer"
+Issues = "https://github.com/ha-anna/file_organizer/issues"
+
+[tool.pytest.ini_options]
+pythonpath = ["./src/file_organizer_ha-anna"]
+addopts = [
+    "--import-mode=importlib",
+]
