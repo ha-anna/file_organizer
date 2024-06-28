@@ -6,11 +6,6 @@ from pathlib import Path
 from directories import DIRECTORIES
 
 
-# TODO: testing
-# TODO: record presentation
-# TODO: submit project
-
-
 def main():
     while True:
         try:
@@ -29,6 +24,7 @@ def main():
 def get_directory_path():
     path = input("Input path to directory that you want to organize: ")
     absolute_path = str(Path().absolute()) + "/" + path
+    print(absolute_path)
     validate_path(absolute_path)
     return absolute_path
 
@@ -63,7 +59,7 @@ def organize_files(base_path, directories):
             for directory, extensions in directories.items():
                 if file_path.suffix.lower() in extensions:
                     try:
-                        shutil.copyfile(
+                        shutil.copy2(
                             str(file_path), str(base_path / directory / file_path.name)
                         )
                         moved = True
@@ -76,7 +72,7 @@ def organize_files(base_path, directories):
                 others_path = base_path / "Others"
                 try:
                     create_directory(others_path)
-                    shutil.copyfile(str(file_path), str(others_path / file_path.name))
+                    shutil.copy2(str(file_path), str(others_path / file_path.name))
                 except PermissionError:
                     print(
                         f"Permission denied: Cannot move file {file_path} to {base_path / directory}"
